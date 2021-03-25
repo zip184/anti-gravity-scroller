@@ -8,7 +8,6 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile`, function (sprite, lo
     } else {
         scrola.ay = FLIPPED_GRAVITY
         isFlipped = 1
-        tiles.setTileAt(tiles.getTileLocation(0, 0), assets.tile`transparency16`)
     }
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
