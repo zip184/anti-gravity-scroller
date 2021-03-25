@@ -1,6 +1,9 @@
 namespace SpriteKind {
     export const Switch = SpriteKind.create()
 }
+/**
+ * Setup Controllers
+ */
 function placeSwitches () {
     switch1 = sprites.create(assets.tile`myTile`, SpriteKind.Switch)
     tiles.placeOnTile(switch1, tiles.getTileLocation(56, 11))
@@ -27,9 +30,6 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
         scrola.setImage(assets.image`walkLeft`)
     }
 })
-/**
- * Setup Controllers
- */
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     if (isFlipped) {
         scrola.setImage(assets.image`walkRightFlipped`)
