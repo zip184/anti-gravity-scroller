@@ -45,7 +45,8 @@ sprites.onOverlap(SpriteKind.Switch, SpriteKind.Player, function (sprite, otherS
         scrola.ay = FLIPPED_GRAVITY
         isFlipped = 1
     }
-    sprite.destroy()
+    sprite.destroy(effects.fire, 300)
+    music.magicWand.play()
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.stairLarge, function (sprite, location) {
     game.over(true, effects.confetti)
